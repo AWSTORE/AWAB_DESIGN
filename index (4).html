@@ -1,0 +1,236 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AWAB DESIGN | طلب تصميم</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* الخط العام */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  body, html {
+    height: 100%;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #fff;
+  }
+
+  @keyframes gradientMove {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  nav a {
+    color: #00ffff;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #00ffff;
+    left: 50%;
+    bottom: -6px;
+    transition: 0.3s;
+    border-radius: 3px;
+  }
+  nav a:hover {
+    color: #00b8b8;
+  }
+  nav a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    background: rgba(0,0,0,0.75);
+    margin: 120px auto 60px auto;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 35px #00ffffaa;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease;
+  }
+
+  .container:hover {
+    transform: scale(1.02);
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #c0f9f9;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: none;
+    background: #111111dd;
+    color: #e0f7f7;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #7fd9d9;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    background: #222222ee;
+    box-shadow: 0 0 15px #00ffff;
+    color: #fff;
+  }
+
+  button {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.3rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #00ffff, #009999);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #000;
+    text-shadow: 0 0 4px #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  button:hover {
+    background: linear-gradient(90deg, #00b8b8, #004747);
+    box-shadow: 0 0 30px #00ffff;
+    color: #fff;
+  }
+
+  #contact p {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.7;
+    color: #a0eaea;
+  }
+  #contact a {
+    color: #00ffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  #contact a:hover {
+    color: #00b8b8;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .container {
+      margin: 100px 15px 40px 15px;
+      padding: 30px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 12px;
+      font-size: 1rem;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#order">طلب تصميم</a>
+  <a href="#contact">تواصل معنا</a>
+</nav>
+
+<div class="container" id="order" tabindex="0" aria-label="نموذج طلب تصميم">
+  <h1>طلب تصميم</h1>
+  <form action="https://formsubmit.co/awstore228@gmail.com" method="POST" novalidate>
+    <label for="name">اسمك الكامل</label>
+    <input type="text" id="name" name="name" placeholder="مثلاً: أواب" required aria-required="true" />
+
+    <label for="email">البريد الإلكتروني</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com" required aria-required="true" />
+
+    <label for="whatsapp">رقم الواتساب (مع رمز الدولة)</label>
+    <input type="tel" id="whatsapp" name="whatsapp" placeholder="مثلاً 966123456789" pattern="^\+?\d{10,15}$" required aria-required="true" title="يرجى إدخال رقم واتساب صحيح مع رمز الدولة" />
+
+    <label for="service">نوع التصميم</label>
+    <select id="service" name="service" required aria-required="true">
+      <option value="" disabled selected>اختر الخدمة</option>
+      <option value="بوستر رياضي">بوستر رياضي</option>
+      <option value="بوستر محل">بوستر محل</option>
+      <option value="إعلان تجاري">إعلان تجاري</option>
+      <option value="بوستر فعالية">بوستر فعالية</option>
+      <option value="تصميم اجتماعي">تصميم اجتماعي</option>
+      <option value="غير ذلك">غير ذلك</option>
+    </select>
+
+    <label for="details">تفاصيل التصميم</label>
+    <textarea id="details" name="details" rows="5" placeholder="أدخل التفاصيل المطلوبة هنا" required aria-required="true"></textarea>
+
+    <button type="submit" aria-label="إرسال الطلب">إرسال الطلب</button>
+  </form>
+</div>
+
+<div class="container" id="contact" tabindex="0" aria-label="معلومات التواصل معنا">
+  <h1>تواصل معنا</h1>
+  <p>
+    للإستفسار أو الدعم تواصل معنا عبر الواتساب: <br />
+    <a href="https://wa.me/966569301988" target="_blank" rel="noopener" aria-label="واتساب +966569301988">+966569301988</a><br /><br />
+    أو راسلنا عبر البريد الإلكتروني: <br />
+    <a href="mailto:awstore228@gmail.com" aria-label="بريد إلكتروني awstore228@gmail.com">awstore228@gmail.com</a>
+  </p>
+</div>
+
+</body>
+</html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
